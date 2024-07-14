@@ -1,4 +1,5 @@
-import 'package:e_com_ui/pages/SplashScreen.dart';
+import 'package:e_com_ui/pages/categories/category_page.dart';
+import 'package:e_com_ui/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),);
+      home: CategoryPage(),
+    );
   }
 }
