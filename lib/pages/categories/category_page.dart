@@ -53,14 +53,19 @@ class _CategoryPageState extends State<CategoryPage> {
             Text("Categories",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             ListView.builder(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
               itemCount: categories.length,
               itemBuilder: (context, index) {
                 final category = categories[index];
-                return Card(
-                  child: ListTile(
-                    leading: Icon(category['icon']),
-                    title: Text(category['title']),
-                    trailing: Text('${category['productCount']} Product'),
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Card(
+                    child: ListTile(
+                      leading: Icon(category['icon']),
+                      title: Text(category['title']),
+                      trailing: Text('${category['productCount']} Product'),
+                    ),
                   ),
                 );
               },
